@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="shortcut icon" href="{{ url_for('imgs', filename='bird.ico') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='bird.ico') }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="../static/styles.css"/>
 </head>
 
 <title>BirdCam</title>
@@ -13,7 +13,7 @@
 <body>
 
 <div class="main" id="newpost">
-  <img  class="camera-bg" style="width: 70%; height: 100%; background-attachment: fixed;" id="bg" class="center" src="{{ url_for('video_feed') }}">
+  <img  class="camera-bg" style="width: 70%; height: 70%; background-attachment: fixed;" id="bg" class="center" src="{{ url_for('video_feed') }}">
 
 </div>
 

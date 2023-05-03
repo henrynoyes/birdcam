@@ -107,7 +107,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-image: url('../imgs/bkyd_bg.jpeg');
+    background-image: url('../static/bkyd_bg.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
