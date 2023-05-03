@@ -1,9 +1,7 @@
-import sys
 from flask import Flask, render_template, Response, request, send_from_directory
 from camera import VideoCamera, det_motion
-import os
 import cv2
-from io import BytesIO
+import os
 import numpy as np
 
 # Establish stream
@@ -35,9 +33,8 @@ def video_feed():
 # Take a photo when pressing camera button
 @app.route('/picture')
 def take_picture():
-    # pi_camera.take_picture()
+    pi_camera.take_picture()
     return "None"
 
 if __name__ == '__main__':
-    # app.run(host='0.0.0.0', port=8000, debug=False)
-    app.run(host='127.0.0.1', port=8000, debug=False)
+    app.run(host='0.0.0.0', port=8000, debug=False)
