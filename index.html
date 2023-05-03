@@ -15,8 +15,7 @@ body {
   bottom: 0;
   width: 100%;
   margin: auto;
-  background-color: black;
-  opacity:0.6;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .navbar a {
@@ -102,13 +101,13 @@ button {
 
 }
 
-.top-right-logo {
+.bottom-text {
   position: absolute;
-  top: 3%;
-  left: 2%;
-  font-size: 38px;
+  right: 5%;
+  font-size: 30px;
   color: white;
   opacity: 1.0;
+  border: none;
 }
 
 body {
@@ -117,9 +116,11 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: black;
+    background-image: url('imgs/bkyd_bg.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
-
 
 </style>
 </head>
@@ -135,20 +136,18 @@ body {
 
 </div>
 
-  <div class="top-right-logo">
-      <!-- <a>BIRDCAM</a> -->
-      <p><span id='clock'></span></p>
-  </div>
-
-
 <div class="navbar">
 
     <div class="picture">
           <a id=take-picture class="picture_class">
               <button id="take-picture-button" onclick="take_picture()">
-                  <i style="background: blue; color: white;" class="fa fa-camera fa-2x" aria-hidden="true"></i>
+                  <i style="background: rgb(101, 63, 0); color: white;" class="fa fa-camera fa-2x" aria-hidden="true"></i>
               </button>
          </a>
+    </div>
+
+    <div class="bottom-text">
+      <p><span id='clock'></span></p>
     </div>
 
 </div>
