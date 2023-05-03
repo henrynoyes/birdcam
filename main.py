@@ -23,7 +23,7 @@ def gen(camera):
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
-        img = cv2.imdecode(np.frombuffer(frame.read(), np.uint8), 1)
+        img = cv2.imdecode(np.frombuffer(frame, np.uint8), 1)
         det_motion(img, mog)
         # push phone
 
