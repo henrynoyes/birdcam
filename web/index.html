@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="{{ url_for('imgs', filename='bird.ico') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css"/>
+</head>
+
+<title>BirdCam</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+
+<div class="main" id="newpost">
+  <img  class="camera-bg" style="width: 70%; height: 100%; background-attachment: fixed;" id="bg" class="center" src="{{ url_for('video_feed') }}">
+
+</div>
+
+<div class="navbar">
+
+    <div class="picture">
+          <a id=take-picture class="picture_class">
+              <button id="take-picture-button" onclick="take_picture()">
+                  <i style="background: rgb(101, 63, 0); color: white;" class="fa fa-camera fa-2x" aria-hidden="true"></i>
+              </button>
+         </a>
+    </div>
+
+    <div class="bottom-text">
+      <p><span id='clock'></span></p>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    var clockElement = document.getElementById('clock');
+
+    function clock() {
+        clockElement.textContent = new Date().toLocaleString();
+    }
+    
+    setInterval(clock, 1000);
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+// Take and save a photo, call picture function in main.py
+$(function() {
+  $('a#take-picture').on('click', function(e) {
+    e.preventDefault()
+    $.getJSON('/picture',
+        function(data) {
+      //do nothing
+    });
+    return false;
+  });
+});
+
+</script>
+
+</body>
+</html>
