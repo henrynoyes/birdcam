@@ -21,7 +21,7 @@ def gen(camera):
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
         curr_img = cv2.imdecode(np.frombuffer(frame, np.uint8), 1)
-        if type(prev_img) == np.ndarray:
+        if type(prev_img) != np.ndarray:
             prev_img = curr_img #first frame
         det_motion(curr_img, prev_img)
         prev_img = curr_img
