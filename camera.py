@@ -4,6 +4,7 @@ from datetime import datetime
 import cv2 
 from libcamera import Transform, controls
 from picamera2 import Picamera2
+import numpy as np
 
 
 class VideoCamera(object):
@@ -37,20 +38,17 @@ class VideoCamera(object):
     def clip(self):
         date = datetime.now().strftime("%m%d%Y-%H%M%S")
 
-def det_motion(img, mog):
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    fgmask = mog.apply(gray)
+def det_motion(curr_img, prev_img):
+    curr_gray = cv2.cvtColor(curr_img, cv2.COLOR_BGR2GRAY)
+    prev_gray = cv2.cvtColor(prev_img, cv2.COLOR_BGR2GRAY)
+
+    diff = cv2.absdiff(curr_gray, prev_gray)
+    diff = cv2.dilate(diff, np.ones((5,5)), 1)
     
-    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
-    fgmask = cv2.erode(fgmask, kernel, iterations=1)
-    fgmask = cv2.dilate(fgmask, kernel, iterations=1)
-    
-    contours, hierarchy = cv2.findContours(fgmask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    thresh = cv2.threshold(diff, thresh=20, maxval=255, type=cv2.THRESH_BINARY)[1]
+    contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     
     for contour in contours:
         if cv2.contourArea(contour) < 1000:
-            continue
-        
-        x, y, w, h = cv2.boundingRect(contour)
-        # cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
-        print(x,y,w,h)
+            x, y, w, h = cv2.boundingRect(contour)
+            print(x,y,w,h)

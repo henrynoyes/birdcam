@@ -15,14 +15,17 @@ def index():
 
 def gen(camera):
     # Establish video stream
-    mog = cv2.createBackgroundSubtractorMOG2()
+    prev_img = None
     while True:
         frame = camera.get_frame()
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
-        print('yielded')
-        img = cv2.imdecode(np.frombuffer(frame, np.uint8), 1)
-        det_motion(img, mog)
+
+        curr_img = cv2.imdecode(np.frombuffer(frame, np.uint8), 1)
+        if prev_img == None:
+            prev_img = curr_img #first frame
+        det_motion(curr_img, prev_img)
+        prev_img = curr_img
         # push phone
 
 @app.route('/video_feed')
