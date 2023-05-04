@@ -48,7 +48,11 @@ def det_motion(curr_img, prev_img):
     thresh = cv2.threshold(diff, thresh=20, maxval=255, type=cv2.THRESH_BINARY)[1]
     contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     
+    count = 0
     for contour in contours:
-        if cv2.contourArea(contour) < 1000:
-            x, y, w, h = cv2.boundingRect(contour)
-            print(x,y,w,h)
+        if cv2.contourArea(contour) > 3000:
+            count += 1
+            print(f'Motion Detected! | {count}')
+            #TODO push phone
+            # x, y, w, h = cv2.boundingRect(contour)
+            # print(x,y,w,h)

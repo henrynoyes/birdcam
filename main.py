@@ -1,7 +1,6 @@
 from flask import Flask, render_template, Response, request, send_from_directory
 from camera import VideoCamera, det_motion
 import cv2
-import os
 import numpy as np
 
 # Establish stream
@@ -26,7 +25,6 @@ def gen(camera):
             prev_img = curr_img #first frame
         det_motion(curr_img, prev_img)
         prev_img = curr_img
-        # push phone
 
 @app.route('/video_feed')
 def video_feed():
