@@ -53,5 +53,5 @@ def det_motion(img, mog):
         
         x, y, w, h = cv2.boundingRect(contour)
         # cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
-        print(x,y,w,h)
+        # print(x,y,w,h)
         
