@@ -12,34 +12,34 @@
 
 <body>
 
-  <div class="main">
-    <img  class="camera" src="{{ url_for('video_feed') }}">
-  </div>
+<div class="main">
+  <img  class="camera" src="{{ url_for('video_feed') }}">
+</div>
 
 <div class="navbar">
 
-    <div class="picture">
-          <a id=take-picture class="picture_class">
-              <button id="take-picture-button" onclick="take_picture()">
-                  <i style="background: rgb(101, 63, 0); color: white;" class="fa fa-camera fa-2x" aria-hidden="true"></i>
-              </button>
-         </a>
-    </div>
+  <div class="picture">
+        <a id=take-picture class="picture_class">
+            <button id="take-picture-button" onclick="take_picture()">
+                <i style="background: rgb(101, 63, 0); color: white;" class="fa fa-camera fa-2x" aria-hidden="true"></i>
+            </button>
+        </a>
+  </div>
 
-    <div class="bottom-text">
-      <p><span id='clock'></span></p>
-    </div>
+  <div class="bottom-text">
+    <p><span id='clock'></span></p>
+  </div>
 
 </div>
 
 <script type="text/javascript">
-    var clockElement = document.getElementById('clock');
+  var clockElement = document.getElementById('clock');
 
-    function clock() {
-        clockElement.textContent = new Date().toLocaleString();
-    }
-    
-    setInterval(clock, 1000);
+  function clock() {
+      clockElement.textContent = new Date().toLocaleString();
+  }
+  
+  setInterval(clock, 1000);
 </script>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
