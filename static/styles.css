@@ -69,10 +69,12 @@ img {
 }
 
     .camera {
-        position: relative;
-        height: 65%;
+        position: absolute;
+        height: 85%;
         width: 85%;
-
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%)
     }
 
     .bottom-text {
