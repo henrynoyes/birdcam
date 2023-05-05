@@ -22,10 +22,6 @@ body {
     font-size: 17px;
 }
 
-.navbar a:hover {
-
-}
-
 .navbar a.active {
     background-color: #4CAF50;
     color: white;
@@ -56,13 +52,6 @@ i.fa {
     padding: 0.5em 0.6em;
 }
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 35%
-}
-
 button {
     background-color: Transparent;
     background-repeat:no-repeat;
@@ -72,23 +61,17 @@ button {
     outline:none;
 }
 
-    .camera-bg {
-        position: fixed;
-        top: 0;
-        left: 0;
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%
+}
 
-        /* Preserve aspet ratio */
-        min-width: 100%;
-        min-height: 100%;
-
-        /* Full height */
-        height: 100%;
-
-
-        /* Center and scale the image nicely */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    .camera {
+        position: relative;
+        height: 65%;
+        width: 85%;
 
     }
 
