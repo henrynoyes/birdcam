@@ -70,7 +70,6 @@ def det_motion(curr_img, prev_img, buffer):
         # print(x,y,w,h)
         buffer = 0
     buffer += 1
-    print(f'buffer {buffer}')
     return buffer
 
 
