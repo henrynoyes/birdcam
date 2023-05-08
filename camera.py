@@ -53,21 +53,30 @@ def push_phone():
     print('sent push notification')
 
 def det_motion(curr_img, prev_img, buffer):
-    curr_gray = cv2.cvtColor(curr_img, cv2.COLOR_BGR2GRAY)
-    prev_gray = cv2.cvtColor(prev_img, cv2.COLOR_BGR2GRAY)
+    # curr_gray = cv2.cvtColor(curr_img, cv2.COLOR_BGR2GRAY)
+    # prev_gray = cv2.cvtColor(prev_img, cv2.COLOR_BGR2GRAY)
 
-    diff = cv2.absdiff(curr_gray, prev_gray)
-    diff = cv2.dilate(diff, np.ones((5,5)), 1)
+    # diff = cv2.absdiff(curr_gray, prev_gray)
+    # diff = cv2.dilate(diff, np.ones((5,5)), 1)
     
-    thresh = cv2.threshold(diff, thresh=20, maxval=255, type=cv2.THRESH_BINARY)[1]
-    contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    # thresh = cv2.threshold(diff, thresh=20, maxval=255, type=cv2.THRESH_BINARY)[1]
+    # contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     
-    if any(cv2.contourArea(contour) > 3000 for contour in contours) and buffer > 120:
-        print(f'Motion Detected! | {buffer}')
-        #TODO push phone
-        # push_phone()
-        # x, y, w, h = cv2.boundingRect(contour)
-        # print(x,y,w,h)
+    # if any(cv2.contourArea(contour) > 3000 for contour in contours) and buffer > 120:
+    #     print(f'Motion Detected! | {buffer}')
+    #     #TODO push phone
+    #     # push_phone()
+    #     # x, y, w, h = cv2.boundingRect(contour)
+    #     # print(x,y,w,h)
+    #     buffer = 0
+    # buffer += 1
+    # return buffer
+    pass
+
+def light(curr_img, prev_img, buffer):
+    mse = np.square(np.subtract(curr_img, prev_img)).mean()
+    if mse > 10 and buffer > 600:
+        print(mse, buffer)
         buffer = 0
     buffer += 1
     return buffer

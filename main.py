@@ -1,5 +1,5 @@
 from flask import Flask, render_template, Response, request, send_from_directory
-from camera import VideoCamera, det_motion
+from camera import VideoCamera, det_motion, light
 import cv2
 import numpy as np
 
@@ -15,16 +15,17 @@ def index():
 def gen(camera):
     # Establish video stream
     prev_img = None
-    # buffer = 121
+    buffer = 121
     while True:
         frame = camera.get_frame()
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
-        curr_img = cv2.imdecode(np.frombuffer(frame, np.uint8), 1)
+        curr_img = cv2.imdecode(np.frombuffer(frame, np.uint8), 0)
         if type(prev_img) != np.ndarray:
             prev_img = curr_img #first frame
         # buffer = det_motion(curr_img, prev_img, buffer)
+        buffer = light(curr_img, prev_img, buffer)
         prev_img = curr_img
 
 @app.route('/video_feed')
