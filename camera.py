@@ -47,7 +47,7 @@ def push_phone():
     po = Pushover(app_key)
     po.user(user_key)
 
-    msg = po.msg(f'Motion Detected at {ts}\nhttps://10.0.0.240:8000')
+    msg = po.msg(f'Motion Detected at {ts}\nhttp://10.0.0.240:8000')
     msg.set('title', 'BirdCam Alert!')
     po.send(msg)
     print('sent push notification')
