@@ -1,4 +1,4 @@
-# BirdCam <img style='float: left; width: 40' src='static/bird72.png'>
+# BirdCam <img style='float: left;' src='static/bird72.png' width='40'>
 A birdhouse camera livestream with motion detection and mobile push notifications. 
 
 ## Installing Pushover
