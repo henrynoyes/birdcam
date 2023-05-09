@@ -15,7 +15,7 @@ def index():
 def gen(camera):
     # Establish video stream
     prev_img = None
-    buffer = 121
+    buffer = 3601
     while True:
         frame = camera.get_frame()
         yield (b'--frame\r\n'

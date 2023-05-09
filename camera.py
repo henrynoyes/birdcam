@@ -75,7 +75,7 @@ def det_motion(curr_img, prev_img, buffer):
 
 def light(curr_img, prev_img, buffer):
     mse = np.square(np.subtract(curr_img, prev_img)).mean()
-    if mse > 10 and buffer > 600:
+    if mse > 50 and buffer > 3600:
         print(mse, buffer)
         buffer = 0
     buffer += 1
