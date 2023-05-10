@@ -22,7 +22,7 @@ def det_motion(prev_img, curr_img, buffer):
     curr_img = cv2.resize(curr_img, (640,360))
     prev_img = cv2.resize(prev_img, (640,360))
     mse = np.square(np.subtract(curr_grey, prev_grey)).mean()
-    sub = np.subtract(curr_grey, prev_grey)
+    sub = cv2.subtract(prev_grey, curr_grey)
     sub = cv2.resize(sub, (800, 450))
     # if mse > 10 and buffer > 20:
     #     print(mse, buffer)
