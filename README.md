@@ -8,7 +8,7 @@ A birdhouse camera livestream with motion detection and mobile push notification
 3.  Name your device, i.e. *henry-phone*
 4. Await the notifications!
 
-<img src='static/push_notif.png'>
+<img src='static/push_notif.png' width='360'>
 
 ## Lightweight Motion Detection
 
