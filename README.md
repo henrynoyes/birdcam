@@ -10,8 +10,6 @@ A birdhouse camera livestream with motion detection and mobile push notification
 
 ## Lightweight Motion Detection
 
-In order to comply with the weak compute power of the raspberry pi, the motion detection is triggered by a simple subtraction of consecutive frames as shown below.
+In order to comply with the weak compute power of the raspberry pi, the motion detection is triggered by a simple subtraction of consecutive frames as shown below. The mean square difference in pixels triggers the motion threshold
 
 <img src='static/light_modec.png'>
-
-With the mean square difference in pixels triggering the motion threshold
