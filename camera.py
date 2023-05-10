@@ -39,7 +39,7 @@ class VideoCamera(object):
     def clip(self):
         date = datetime.now().strftime("%m%d%Y-%H%M%S")
 
-def push_phone():
+def push_msg():
     app_key = Path('push/app_key.txt').read_text()
     user_key = Path('push/user_key.txt').read_text()
     ts = datetime.now().strftime('%I:%M %p')
@@ -52,11 +52,26 @@ def push_phone():
     po.send(msg)
     print('sent push notification')
 
+def push_img():
+    pass
+    # app_key = Path('push/app_key.txt').read_text()
+    # user_key = Path('push/user_key.txt').read_text()
+    # ts = datetime.now().strftime('%I:%M %p')
+
+    # po = Pushover(app_key)
+    # po.user(user_key)
+
+    # msg = po.msg(f'Motion Detected at {ts}\nhttp://10.0.0.240:8000')
+    # msg.set('title', 'BirdCam Alert!')
+    # po.send(msg)
+    # print('sent push notification')
+
 def light(curr_img, prev_img, buffer):
     mse = np.square(np.subtract(curr_img, prev_img)).mean()
     if mse > 50 and buffer > 3600:
         print(mse, buffer)
-        push_phone()
+        # push_msg()
+        push_img
         buffer = 0
     buffer += 1
     return buffer
