@@ -24,9 +24,8 @@ def gen(camera):
         curr_img = cv2.imdecode(np.frombuffer(frame, np.uint8), 0)
         if type(prev_img) != np.ndarray:
             prev_img = curr_img #first frame
-        buffer = light(curr_img, prev_img, buffer, frame)
+        buffer = light(prev_img, curr_img, buffer, frame)
         prev_img = curr_img
-        buffer += 1
 
 @app.route('/video_feed')
 def video_feed():

@@ -49,10 +49,11 @@ def push_img(bin):
     po.message(user=user_key, title='Birdcam Alert!', message=msg, attachment=bin)
     print(f'modec push sent | {ts}')
 
-def light(curr_img, prev_img, buffer, bin):
-    mse = np.square(np.subtract(curr_img, prev_img)).mean()
-    if mse > 50 and buffer > 3600:
-        print(mse, buffer)
+def light(prev_img, curr_img, buffer, bin):
+    sub = cv2.subtract(prev_img, curr_img)
+    scr = sub.mean()
+    if scr > 10 and buffer > 3600:
+        print(scr, buffer)
         push_img(bin)
         buffer = 0
     buffer += 1
