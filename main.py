@@ -1,5 +1,5 @@
 from flask import Flask, render_template, Response, request, send_from_directory
-from camera import VideoCamera, det_motion, light, push_img
+from camera import VideoCamera, light, push_img
 import cv2
 import numpy as np
 
