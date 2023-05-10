@@ -39,35 +39,21 @@ class VideoCamera(object):
     def clip(self):
         date = datetime.now().strftime("%m%d%Y-%H%M%S")
 
-def push_msg():
-    pass
-    # app_key = Path('push/app_key.txt').read_text()
-    # user_key = Path('push/user_key.txt').read_text()
-    # ts = datetime.now().strftime('%I:%M %p')
-
-    # po = Pushover(app_key)
-    # po.user(user_key)
-
-    # msg = po.msg(f'Motion Detected at {ts}\nhttp://10.0.0.240:8000')
-    # msg.set('title', 'BirdCam Alert!')
-    # po.send(msg)
-    # print('sent push notification')
-
 def push_img(bin):
     app_key = Path('push/app_key.txt').read_text()
     user_key = Path('push/user_key.txt').read_text()
     ts = datetime.now().strftime('%I:%M %p')
+    msg = f'Motion Detected at {ts}\nhttp://10.0.0.240:8000'
 
     po = Pushover(app_key)
-    po.message(user=user_key, title='Test Image', message=ts, attachment=bin)
-    print('sent!')
+    po.message(user=user_key, title='Birdcam Alert!', message=msg, attachment=bin)
+    print(f'modec push sent | {ts}')
 
 def light(curr_img, prev_img, buffer, bin):
     mse = np.square(np.subtract(curr_img, prev_img)).mean()
     if mse > 50 and buffer > 3600:
         print(mse, buffer)
-        # push_msg()
-        push_img()
+        push_img(bin)
         buffer = 0
     buffer += 1
     return buffer

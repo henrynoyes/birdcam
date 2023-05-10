@@ -15,7 +15,7 @@ def index():
 def gen(camera):
     # Establish video stream
     prev_img = None
-    buffer = 2900
+    buffer = 3000
     while True:
         frame = camera.get_frame()
         yield (b'--frame\r\n'
@@ -24,9 +24,7 @@ def gen(camera):
         curr_img = cv2.imdecode(np.frombuffer(frame, np.uint8), 0)
         if type(prev_img) != np.ndarray:
             prev_img = curr_img #first frame
-        # buffer = light(curr_img, prev_img, buffer)
-        if buffer % 500 == 0:
-            push_img(frame)
+        buffer = light(curr_img, prev_img, buffer, frame)
         prev_img = curr_img
         buffer += 1
 
