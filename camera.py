@@ -33,7 +33,7 @@ class VideoCamera(object):
 
     # Take a photo, called by camera button
     def take_picture(self):
-        today_date = datetime.now().strftime("%m%d%Y-%H%M%S")
+        today_date = datetime.now().strftime("capture-%m%d-%H%M%S")
         print(self.vs.capture_file(today_date+self.file_type))
         
     def clip(self):
@@ -42,7 +42,7 @@ class VideoCamera(object):
 def push_phone():
     app_key = Path('push/app_key.txt').read_text()
     user_key = Path('push/user_key.txt').read_text()
-    ts = datetime.now().strftime('%H:%M %p')
+    ts = datetime.now().strftime('%I:%M %p')
 
     po = Pushover(app_key)
     po.user(user_key)
