@@ -21,9 +21,10 @@ def det_motion(prev_img, curr_img, buffer):
     prev_grey = cv2.cvtColor(prev_img, cv2.COLOR_BGR2GRAY)
     curr_img = cv2.resize(curr_img, (640,360))
     prev_img = cv2.resize(prev_img, (640,360))
-    mse = np.square(np.subtract(curr_grey, prev_grey)).mean()
     sub = cv2.subtract(prev_grey, curr_grey)
     sub = cv2.resize(sub, (800, 450))
+    mse = sub.mean()
+    print(mse)
     # if mse > 10 and buffer > 20:
     #     print(mse, buffer)
     #     cv2.imshow('sub', sub)
