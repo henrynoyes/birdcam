@@ -8,8 +8,10 @@ A birdhouse camera livestream with motion detection and mobile push notification
 3.  Name your device, i.e. *henry-phone*
 4. Await the notifications!
 
+<img src='static/push_notif.png'>
+
 ## Lightweight Motion Detection
 
-In order to comply with the weak compute power of the raspberry pi, the motion detection is triggered by a simple subtraction of consecutive frames as shown below. The mean square difference in pixels triggers the motion threshold
+In order to comply with the weak compute power of the raspberry pi, the motion detection is triggered by a simple subtraction of consecutive frames as shown below. The mean difference in pixels triggers the motion threshold.
 
 <img src='static/light_modec.png'>
