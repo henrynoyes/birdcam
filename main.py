@@ -32,6 +32,10 @@ def video_feed():
     return Response(gen(pi_camera),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
+@app.route('/motion')
+def send_modec():
+    return send_from_directory('/home/birdcam/static', 'modec.jpg')
+
 # Take a photo when pressing camera button
 @app.route('/picture')
 def take_picture():

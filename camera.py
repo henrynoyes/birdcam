@@ -40,8 +40,8 @@ class VideoCamera(object):
         date = datetime.now().strftime("%m%d%Y-%H%M%S")
 
 def push_img(bin):
-    app_key = Path('push/app_key.txt').read_text()
-    user_key = Path('push/user_key.txt').read_text()
+    app_key = Path('/home/birdcam/push/app_key.txt').read_text()
+    user_key = Path('/home/birdcam/push/user_key.txt').read_text()
     ts = datetime.now().strftime('%I:%M %p')
     msg = f'Motion Detected at {ts}\nhttp://10.0.0.240:8000'
 
@@ -53,7 +53,7 @@ def light(prev_img, curr_img, buffer, bin):
     sub = cv2.subtract(prev_img, curr_img)
     scr = sub.mean()
     if scr > 10 and buffer > 3600:
-        print(scr, buffer)
+        cv2.imwrite('/home/birdcam/static/modec.jpg', sub)
         push_img(bin)
         buffer = 0
     buffer += 1
