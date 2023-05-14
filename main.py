@@ -9,8 +9,8 @@ pi_camera = VideoCamera()
 app = Flask(__name__, static_folder='./static/')
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def main_page():
+    return render_template('main.html')
 
 def gen(camera):
     # Establish video stream
@@ -33,8 +33,8 @@ def video_feed():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @app.route('/motion')
-def send_modec():
-    return send_from_directory('/home/birdcam/static', 'modec.jpg')
+def modec_page():
+    return render_template('motion.html')
 
 # Take a photo when pressing camera button
 @app.route('/picture')
