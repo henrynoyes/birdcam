@@ -75,8 +75,9 @@ button {
             height: 360px;
             width: 640px;
             left: 50%;
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%)
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
         }
 
         .bottom-text {
@@ -103,8 +104,9 @@ button {
             height: 270px;
             width: 480px;
             left: 50%;
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%)
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
         }
 
         .bottom-text {
@@ -131,8 +133,9 @@ button {
             height: 180px;
             width: 320px;
             left: 50%;
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%)
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%) rotate(90deg);
+            transform: translateX(-50%) translateY(-50%) rotate(90deg);
         }
 
         .bottom-text {
