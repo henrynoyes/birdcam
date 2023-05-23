@@ -15,7 +15,7 @@ def main_page():
 def gen(camera):
     # Establish video stream
     prev_img = None
-    buffer = 3000
+    buffer = 10
     while True:
         frame = camera.get_frame()
         yield (b'--frame\r\n'
