@@ -15,3 +15,9 @@ A birdhouse camera livestream with motion detection and mobile push notification
 In order to comply with the weak compute power of the raspberry pi, the motion detection is triggered by a simple subtraction of consecutive frames as shown below. The mean difference in pixels triggers the motion threshold.
 
 <img src='static/light_modec.png'>
+
+## Update 5/24
+
+The birdcam has its first visitor. Caught perfectly by the motion detection :D
+
+<img src='static/visitor.jpeg'>
