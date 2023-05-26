@@ -52,7 +52,7 @@ def push_img(bin):
 def light(prev_img, curr_img, buffer, bin):
     sub = cv2.subtract(prev_img, curr_img)
     scr = sub.mean()
-    if scr > 15 and buffer > 10:
+    if scr > 15 and buffer > 150:
         cv2.imwrite('/home/shop/birdcam/static/modec.jpg', sub)
         push_img(bin)
         buffer = 0
