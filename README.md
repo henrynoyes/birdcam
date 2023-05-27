@@ -21,3 +21,9 @@ In order to comply with the weak compute power of the raspberry pi, the motion d
 The birdcam has its first visitor. Caught perfectly by the motion detection :D
 
 <img src='static/visitor.jpeg' width='480'>
+
+## Update 5/27
+
+Sneak peek of nest construction
+
+<img src='static/construction.gif' width='480'>
