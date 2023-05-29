@@ -14,27 +14,27 @@ def main_page():
 
 def gen(camera):
     # Establish video stream
-    prev_img = None
-    buffer = 150
+    # prev_img = None
+    # buffer = 150
     while True:
         frame = camera.get_frame()
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
-        curr_img = cv2.imdecode(np.frombuffer(frame, np.uint8), 0)
-        if type(prev_img) != np.ndarray:
-            prev_img = curr_img #first frame
-        buffer = light(prev_img, curr_img, buffer, frame)
-        prev_img = curr_img
+        # curr_img = cv2.imdecode(np.frombuffer(frame, np.uint8), 0)
+        # if type(prev_img) != np.ndarray:
+        #     prev_img = curr_img #first frame
+        # buffer = light(prev_img, curr_img, buffer, frame)
+        # prev_img = curr_img
 
 @app.route('/video_feed')
 def video_feed():
     return Response(gen(pi_camera),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
-@app.route('/motion')
-def modec_page():
-    return render_template('motion.html')
+# @app.route('/motion')
+# def modec_page():
+#     return render_template('motion.html')
 
 # Take a photo when pressing camera button
 @app.route('/picture')
