@@ -39,3 +39,9 @@ Sneak peek of nest construction
 Eggcellent news
 
 <img src='static/eggcellent.jpg' width='480'>
+
+## Update 6/18
+
+The babies have escaped their eggs
+
+<img src='static/hatch.gif' width='480'>
