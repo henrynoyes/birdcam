@@ -45,3 +45,9 @@ Eggcellent news
 The babies have escaped their eggs
 
 <img src='static/hatch.gif' width='480'>
+
+## Update 6/20
+
+More baby action + mini afros
+
+<img src='static/scream.gif' width='480'>
