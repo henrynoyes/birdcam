@@ -24,7 +24,7 @@ This decision was made as the motion detection has served its purpose in the ear
 
 ## RTSP Stream with VLC
 
-6/25 - Replaced MediaMTX service with libcamera + VLC implementaion. See [stream.sh](https://github.com/henrynoyes/birdcam/stream.sh) for RTSP streaming command.
+6/25 - Replaced MediaMTX service with libcamera + VLC implementaion. See [stream.sh](https://github.com/henrynoyes/birdcam/blob/master/stream.sh) for RTSP streaming command.
 
 ## Update 5/24
 
