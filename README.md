@@ -16,11 +16,15 @@ In order to comply with the weak compute power of the raspberry pi, the motion d
 
 <img src='static/light_modec.png'>
 
-## RTSP Stream
+## RTSP Stream with MediaMTX
 
 As of 6/6 the streaming service has been transferred from flask deployment to a local RTSP stream. This is done using [MediaMTX](https://github.com/bluenviron/mediamtx). Similar to the flask deployment, this allows for viewing using VLC and HTTP (web browser).
 
 This decision was made as the motion detection has served its purpose in the early stages of birdcam activity. With a full family now in the house, there is less need for detection and an emphasis on consistent low-latency streaming, which MediaMTX provides.
+
+## RTSP Stream with VLC
+
+6/25 - Replaced MediaMTX service with libcamera + VLC implementaion. See [stream.sh](https://github.com/henrynoyes/birdcam/stream.sh) for RTSP streaming command.
 
 ## Update 5/24
 
@@ -51,3 +55,9 @@ The babies have escaped their eggs
 More baby action + mini afros
 
 <img src='static/scream.gif' width='480'>
+
+## Update 6/25
+
+They are growing up fast and attempting to open their eyes
+
+<img src='static/squint.gif' width='480'>
