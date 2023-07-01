@@ -61,3 +61,9 @@ More baby action + mini afros
 They are growing up fast and attempting to open their eyes
 
 <img src='static/squint.gif' width='480'>
+
+## Update 7/1
+
+Full family of feathers
+
+<img src='static/fam.gif' width='480'>
