@@ -1,0 +1,2 @@
+sudo: 0 8 * * * /sbin/shutdown -r now
+user: @reboot /home/shop/birdcam/stream.sh
