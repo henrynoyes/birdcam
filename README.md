@@ -25,6 +25,10 @@ This decision was made as the motion detection has served its purpose in the ear
 
 6/25 - Replaced MediaMTX service with libcamera + VLC implementaion. See [stream.sh](https://github.com/henrynoyes/birdcam/blob/master/stream.sh) for RTSP streaming command.
 
+<details>
+
+<summary><h2>Chapter 1: The Bluebirds</h2></summary>
+
 ## Update 5/24
 
 The birdcam has its first visitor. Caught perfectly by the motion detection :D
@@ -39,7 +43,7 @@ Sneak peek of nest construction
 
 ## Update 6/6
 
-Eggcellent news, we are housing a bluebird family
+Eggcellent news, we are housing a [bluebird](https://en.wikipedia.org/wiki/Eastern_bluebird) family
 
 <img src='static/eggcellent.jpg' width='480'>
 
@@ -80,3 +84,18 @@ Success!! All the fledglings are flying out in the backyard
 <img src='static/empty.jpg' width='480'> 
 
 Until the next family arrives...
+
+</details>
+
+<details>
+
+<summary><h2>Chapter 2: The Wrens</h2></summary>
+
+## Update 7/19
+
+The bluebird nest was cleared out and a female [carolina wren](https://en.wikipedia.org/wiki/Carolina_wren) is our newest inhabitant. The four eggs were laid a few days ago and will take another week or so to hatch.
+
+<img src='static/wren-eggs.gif' width='480'> 
+
+</details>
+
