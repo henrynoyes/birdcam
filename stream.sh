@@ -1,1 +1,1 @@
-libcamera-vid -t 0 --nopreview -v 0 --mode 1280:960 --framerate 30 --tuning-file /usr/share/libcamera/ipa/raspberrypi/imx219_noir.json --inline -o - | cvlc stream:///dev/stdin --sout '#rtp{sdp=rtsp://:8554/bird}' :demux=h264 &
+libcamera-vid -t 0 --nopreview -v 0 --mode 1280:960 --framerate 30 --tuning-file /usr/share/libcamera/ipa/rpi/vc4/imx219_noir.json --inline -o - | cvlc stream:///dev/stdin --sout '#rtp{sdp=rtsp://:8554/bird}' :demux=h264 &
