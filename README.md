@@ -29,7 +29,7 @@ This decision was made as the motion detection has served its purpose in the ear
 
 <summary><h2>Chapter 1: The Bluebirds</h2></summary>
 
-## Update 5/24
+## Update 5/24/23
 
 The birdcam has its first visitor. Caught perfectly by the motion detection :D
 
@@ -43,7 +43,7 @@ Sneak peek of nest construction
 
 ## Update 6/6
 
-Eggcellent news, we are housing a [bluebird](https://en.wikipedia.org/wiki/Eastern_bluebird) family
+Eggcellent news, we are housing a [bluebird](https://www.allaboutbirds.org/guide/Eastern_Bluebird/overview) family
 
 <img src='media/eggcellent.jpg' width='480'>
 
@@ -71,7 +71,7 @@ Full family of feathers
 
 <img src='media/fam.gif' width='480'>
 
-## Update 7/5 
+## Update 7/5
 
 4 of the babies have officially left the nest! Only a single runt remains with mama...
 
@@ -91,9 +91,9 @@ Until the next family arrives...
 
 <summary><h2>Chapter 2: The Wrens</h2></summary>
 
-## Update 7/19
+## Update 7/19/23
 
-The bluebird nest was cleared out and a female [carolina wren](https://en.wikipedia.org/wiki/Carolina_wren) is our newest inhabitant. The four eggs were laid a few days ago and will take another week or so to hatch.
+The bluebird nest was cleared out and a female [carolina wren](https://www.allaboutbirds.org/guide/Carolina_Wren/overview) is our newest inhabitant. The four eggs were laid a few days ago and will take another week or so to hatch.
 
 <img src='media/wren-eggs.gif' width='480'>
 
@@ -103,6 +103,18 @@ Some shots of the three baby wrens. Unfortunately one of the eggs did not hatch.
 
 <img src='media/wren_feed.gif' width='480'>
 
+
+</details>
+
+<details>
+
+<summary><h2>Chapter 3: The Lone Woodpecker</h2></summary>
+
+## Update 8/23/24
+
+It's been an uneventful summer for the birdcam, to say the least. Early June saw a potential bluebird nesting thwarted by a violent sparrow, and July was entirely devoid of activity. Finally, a couple weeks ago, we secured our first inhabitant of the summer: a [downy woodpecker](https://www.allaboutbirds.org/guide/Downy_Woodpecker/overview). They have adopted the birdcam as a roosting box. They dwell from dawn to dusk and often spend time cleaning their feathers before dozing off.
+
+<img src='media/downy.gif' width='480'>
 
 </details>
 
