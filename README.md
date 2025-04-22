@@ -120,7 +120,7 @@ It's been an uneventful summer for the birdcam, to say the least. Early June saw
 
 <details>
 
-<summary><h2 id="chapter-4">Chapter 4: Return of the Bluebirds </h2></summary>
+<summary><h2 id="chapter-4">Chapter 4: Return of the Bluebirds</h2></summary>
 
 ## Update 4/22/25
 
