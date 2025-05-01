@@ -23,7 +23,11 @@ This decision was made as the motion detection has served its purpose in the ear
 
 ## RTSP Stream with VLC
 
-6/25/23 - Replaced MediaMTX service with libcamera + VLC implementaion. See [stream.sh](https://github.com/henrynoyes/birdcam/blob/master/stream.sh) for RTSP streaming command.
+6/25/23 - Replaced MediaMTX service with libcamera + VLC implementaion. See [stream_local.sh](https://github.com/henrynoyes/birdcam/blob/master/stream_local.sh) for RTSP streaming command.
+
+## RTMP Stream with YouTube
+
+5/1/25 - Since I'll be away from home this summer, I've added a libcamera + ffmpeg implementation to livestream to YouTube. See [stream_youtube.sh](https://github.com/henrynoyes/birdcam/blob/master/stream_youtube.sh)
 
 <details>
 
