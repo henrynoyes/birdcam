@@ -2,6 +2,7 @@ import json
 from datetime import datetime, timedelta, timezone
 from requests_oauthlib import OAuth2Session
 import logging
+from pathlib import Path
 
 logging.basicConfig(
             level=logging.INFO,
@@ -13,8 +14,9 @@ logging.basicConfig(
 
 class YouTubeLivestream:
     YOUTUBE_API_BASE = 'https://www.googleapis.com/youtube/v3'
+    auth_dir = Path(__file__).resolve().parent
     
-    def __init__(self, credentials_file='credentials.json', token_file='exp_token.json'):
+    def __init__(self, credentials_file=(auth_dir / 'credentials.json'), token_file=(auth_dir / 'token.json')):
         self.CREDENTIALS_FILE = credentials_file
         self.TOKEN_FILE = token_file
         
