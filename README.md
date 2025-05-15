@@ -1,6 +1,29 @@
 # BirdCam <img style='float: left;' src='media/setup/bird72.png' width='40'>
 A birdhouse camera livestream with motion detection and mobile push notifications.
 
+<details>
+
+<summary><h2 id="tech-details">Tehcnical Details</h2></summary>
+
+## RTMP Stream with YouTube
+
+5/1/25 - Since I'll be away from home this summer, I've added a libcamera + ffmpeg implementation to livestream to YouTube. See [stream_youtube.sh](https://github.com/henrynoyes/birdcam/blob/master/stream_youtube.sh)
+
+## RTSP Stream with VLC
+
+6/25/23 - Replaced MediaMTX service with libcamera + VLC implementaion. See [stream_local.sh](https://github.com/henrynoyes/birdcam/blob/master/stream_local.sh) for RTSP streaming command.
+
+## RTSP Stream with MediaMTX
+As of 6/6/23 the streaming service has been transferred from flask deployment to a local RTSP stream. This is done using [MediaMTX](https://github.com/bluenviron/mediamtx). Similar to the flask deployment, this allows for viewing using VLC and HTTP (web browser).
+
+This decision was made as the motion detection has served its purpose in the early stages of birdcam activity. With a full family now in the house, there is less need for detection and an emphasis on consistent low-latency streaming, which MediaMTX provides.
+
+## Lightweight Motion Detection
+
+In order to comply with the weak compute power of the raspberry pi, the motion detection is triggered by a simple subtraction of consecutive frames as shown below. The mean difference in pixels triggers the motion threshold.
+
+<img src='media/setup/light_modec.png'>
+
 ## Installing Pushover
 
 1. Download the [Pushover App](https://apps.apple.com/us/app/pushover-notifications/id506088175?ls=1) from the app store.
@@ -10,24 +33,7 @@ A birdhouse camera livestream with motion detection and mobile push notification
 
 <img src='media/setup/push_notif.png' width='360'>
 
-## Lightweight Motion Detection
-
-In order to comply with the weak compute power of the raspberry pi, the motion detection is triggered by a simple subtraction of consecutive frames as shown below. The mean difference in pixels triggers the motion threshold.
-
-<img src='media/setup/light_modec.png'>
-
-## RTSP Stream with MediaMTX
-As of 6/6/23 the streaming service has been transferred from flask deployment to a local RTSP stream. This is done using [MediaMTX](https://github.com/bluenviron/mediamtx). Similar to the flask deployment, this allows for viewing using VLC and HTTP (web browser).
-
-This decision was made as the motion detection has served its purpose in the early stages of birdcam activity. With a full family now in the house, there is less need for detection and an emphasis on consistent low-latency streaming, which MediaMTX provides.
-
-## RTSP Stream with VLC
-
-6/25/23 - Replaced MediaMTX service with libcamera + VLC implementaion. See [stream_local.sh](https://github.com/henrynoyes/birdcam/blob/master/stream_local.sh) for RTSP streaming command.
-
-## RTMP Stream with YouTube
-
-5/1/25 - Since I'll be away from home this summer, I've added a libcamera + ffmpeg implementation to livestream to YouTube. See [stream_youtube.sh](https://github.com/henrynoyes/birdcam/blob/master/stream_youtube.sh)
+</details>
 
 <details>
 
@@ -131,5 +137,15 @@ It's been an uneventful summer for the birdcam, to say the least. Early June saw
 It did not take long for avian action to begin in 2025. Just after installing the birdcam for the third season, a pair of bluebirds were spotted scouting the historied property. Much like the [inaugural inhabitants from 2023](#chapter-1), these guys are [eastern bluebirds](https://www.allaboutbirds.org/guide/Eastern_Bluebird/overview). The parents are currently locked in on nest construction, preparing for an eventful start to the summer.
 
 <img src='media/chapter-4/building.gif' width='480'>
+
+## Update 5/14
+
+It's a starting five for the NY Bluebirds as they look to recapture their performance from the 2023 season. The eggs were laid on consecutive days, with the final one on 5/1. Just this morning, the first set of beaks broke through their shells. It didn't take long for them to open their mouths either. Three babies remain in their eggs as the fledging countdown is ready to begin.
+
+<img src='media/chapter-4/eggs.jpg' width='480'>
+
+<img src='media/chapter-4/hatching.gif' width='480'>
+
+<img src='media/chapter-4/birthday-mouths.gif' width='480'>
 
 </details>
