@@ -3,7 +3,7 @@ A birdhouse camera livestream with motion detection and mobile push notification
 
 <details>
 
-<summary><h2 id="tech-details">Tehcnical Details</h2></summary>
+<summary><h2 id="tech-details">Technical Details</h2></summary>
 
 ## RTMP Stream with YouTube
 

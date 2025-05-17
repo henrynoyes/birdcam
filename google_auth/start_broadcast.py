@@ -5,12 +5,12 @@ import logging
 from pathlib import Path
 
 logging.basicConfig(
-            level=logging.INFO,
-            format='%(asctime)s - %(levelname)s - %(message)s',
-            handlers=[
-                logging.FileHandler('broadcast.log', mode='w'),
-            ]
-        )
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('broadcast.log', mode='w'),
+    ]
+)
 
 class YouTubeLivestream:
     YOUTUBE_API_BASE = 'https://www.googleapis.com/youtube/v3'
