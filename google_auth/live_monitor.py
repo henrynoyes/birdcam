@@ -5,17 +5,18 @@ import logging
 from pathlib import Path
 import json
 
+auth_dir = Path(__file__).resolve().parent
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('monitor.log', mode='w'),
+        logging.FileHandler(auth_dir / 'monitor.log', mode='w'),
     ]
 )
 
 class YouTubeLivestreamMonitor:
     YOUTUBE_API_BASE = 'https://www.googleapis.com/youtube/v3'
-    auth_dir = Path(__file__).resolve().parent
     
     def __init__(self, credentials_file=(auth_dir / 'channel.json'), check_time_min=10):
         self.CREDENTIALS_FILE = credentials_file

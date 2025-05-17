@@ -4,17 +4,17 @@ from requests_oauthlib import OAuth2Session
 import logging
 from pathlib import Path
 
+auth_dir = Path(__file__).resolve().parent
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('broadcast.log', mode='w'),
+        logging.FileHandler(auth_dir / 'broadcast.log', mode='w'),
     ]
 )
-
 class YouTubeLivestream:
     YOUTUBE_API_BASE = 'https://www.googleapis.com/youtube/v3'
-    auth_dir = Path(__file__).resolve().parent
     
     def __init__(self, credentials_file=(auth_dir / 'credentials.json'), token_file=(auth_dir / 'token.json')):
         self.CREDENTIALS_FILE = credentials_file
