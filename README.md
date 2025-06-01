@@ -148,4 +148,16 @@ It's a starting five for the NY Bluebirds as they look to recapture their perfor
 
 <img src='media/chapter-4/birthday-mouths.gif' width='480'>
 
+## Update 5/31
+
+Two weeks and some change later, the crew is almost ready to take flight. All 5 eggs hatched successfully and the babies adapted well to life in the nest. Each day they grow more curious about the magical opening in the house and continue to rev up their wings. We are expecting the first takeoff any day now. Feathers crossed everyone departs smoothly.
+
+10-day-old squad
+
+<img src='media/chapter-4/10day-squad.png' width='480'>
+
+Saying hello to the livestream
+
+<img src='media/chapter-4/spotted.gif' width='480'>
+
 </details>
