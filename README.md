@@ -160,4 +160,14 @@ Saying hello to the livestream
 
 <img src='media/chapter-4/spotted.gif' width='480'>
 
+## Update 6/1
+
+Well, it didn't take much longer for the babies to find their courage. Just one day after the previous update, all five bluebirds have taken to the skies. Another success!! Thanks to the YouTube livestream, the exact moments of graduation were captured on video.
+
+https://github.com/user-attachments/assets/615581e8-8606-4bbb-95ed-6cebbe21503f
+
+<img src='media/chapter-4/timelapse.gif' width='480'>
+
+The time between the first and last departure was only 7 minutes! This family is in sync.
+
 </details>
